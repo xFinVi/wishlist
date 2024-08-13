@@ -21,6 +21,3 @@ class DatabaseSeeder extends Seeder
         ]);
     }
 }
-
-// DATABASE_URL=postgres://wishlist_fly:T6ZrlmHAD15sVjy@wishlist-pg.flycast:5432/wishlist_fly?sslmode=disable
-// PS C:\Users\Filip\Herd\sendnotes>
