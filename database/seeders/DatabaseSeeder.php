@@ -21,3 +21,7 @@ class DatabaseSeeder extends Seeder
         ]);
     }
 }
+
+
+// MySQL DB Name	MySQL User Name	MySQL Password	MySQL Host Name	PHPMyAdmin
+// if0_37100197_sendnotes	if0_37100197	(Your vPanel Password)	sql110.infinityfree.com
