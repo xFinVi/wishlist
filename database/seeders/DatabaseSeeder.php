@@ -22,6 +22,5 @@ class DatabaseSeeder extends Seeder
     }
 }
 
-
-// MySQL DB Name	MySQL User Name	MySQL Password	MySQL Host Name	PHPMyAdmin
-// if0_37100197_sendnotes	if0_37100197	(Your vPanel Password)	sql110.infinityfree.com
+// DATABASE_URL=postgres://wishlist_fly:T6ZrlmHAD15sVjy@wishlist-pg.flycast:5432/wishlist_fly?sslmode=disable
+// PS C:\Users\Filip\Herd\sendnotes>

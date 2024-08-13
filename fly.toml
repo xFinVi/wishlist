@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for homeremedies-morning-darkness-6691 on 2024-08-13T19:16:44+01:00
+# fly.toml app configuration file generated for wishlist-fly on 2024-08-13T19:41:58+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'homeremedies-morning-darkness-6691'
+app = 'wishlist-fly'
 primary_region = 'lhr'
 console_command = 'php /var/www/html/artisan tinker'
 
@@ -13,10 +13,9 @@ console_command = 'php /var/www/html/artisan tinker'
     PHP_VERSION = '8.2'
 
 [env]
- 
   APP_ENV = "production"
   DB_CONNECTION = "pgsql"
-  APP_URL = 'https://homeremedies-morning-darkness-6691.fly.dev'
+  APP_URL = 'https://wishlist-fly.fly.dev/'
   LOG_CHANNEL = 'stderr'
   LOG_LEVEL = 'info'
   LOG_STDERR_FORMATTER = 'Monolog\Formatter\JsonFormatter'
@@ -30,6 +29,9 @@ console_command = 'php /var/www/html/artisan tinker'
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
+
+[deploy]
+  release_command = "php /var/www/html/artisan migrate --force"
 
 [[vm]]
   memory = '1gb'
