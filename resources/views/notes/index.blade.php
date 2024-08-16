@@ -16,7 +16,7 @@
 
 
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <livewire:notes.show-notes lazy />
+                <livewire:notes.show-notes />
             </div>
         </div>
 </x-app-layout>
