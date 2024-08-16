@@ -13,8 +13,8 @@ console_command = 'php /var/www/html/artisan tinker'
     PHP_VERSION = '8.2'
 
 [env]
-  APP_ENV = "production"
-  DB_CONNECTION = "pgsql"
+APP_ENV = "production"
+DB_CONNECTION = "pgsql"
   APP_URL = 'https://wishlist-fly.fly.dev/'
   LOG_CHANNEL = 'stderr'
   LOG_LEVEL = 'info'
@@ -32,9 +32,10 @@ console_command = 'php /var/www/html/artisan tinker'
 
 [deploy]
   release_command = "php /var/www/html/artisan migrate --force"
-  [processes]
-  app=""
-  cron="cron -f"
+
+[processes]
+  app = ""
+  cron = "cron -f"
   worker = "php artisan queue:listen"
 
 [[vm]]

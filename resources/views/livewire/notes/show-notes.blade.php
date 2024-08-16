@@ -49,7 +49,7 @@ new class extends Component {
 
                             <div class="spacy-x-3">
 
-                                <x-mini-button xs rounded label="Cyan" flat icon="eye" spinner focus:solid.cyan
+                                <x-mini-button xs rounded gray flat icon="eye" spinner focus:solid.cyan
                                     href="{{ route('notes.show', $note) }}" wire:navigate />
                                 <x-mini-button xs rounded rose flat icon="x-mark"
                                     wire:click="delete('{{ $note->id }}')" />
