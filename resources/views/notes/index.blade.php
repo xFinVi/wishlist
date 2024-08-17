@@ -4,7 +4,8 @@
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 {{ __('Notes') }}
             </h2>
-            <x-button sm primary icon-right="plus" href="{{ route('notes.create') }}">Create a note.</x-button>
+            <x-button sm primary icon="plus" href="{{ route('notes.create') }}"
+                class=" text-white bg-[#219ebc] hover:bg-[#8ecae6] lg">Create a note.</x-button>
         </div>
 
     </x-slot>

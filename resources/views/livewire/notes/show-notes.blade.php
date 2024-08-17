@@ -14,7 +14,7 @@ new class extends Component {
     public function with(): array
     {
         return [
-            'notes' => Auth::user()->notes()->orderByRaw("CASE WHEN send_date >= DATETIME('now') THEN 0 ELSE 1 END")->orderBy('send_date', 'asc')->get(),
+            'notes' => Auth::user()->notes()->orderByRaw('CASE WHEN send_date >= CURRENT_TIMESTAMP THEN 0 ELSE 1 END')->orderBy('send_date', 'asc')->get(),
         ];
     }
 }; ?>
@@ -25,8 +25,12 @@ new class extends Component {
             @if ($notes->isEmpty())
                 <div class="flex flex-col items-center justify-center gap-5 text-center">
                     <p class="text-2xl font-bold">No notes available</p>
-                    <p class="text-sm">Let's create your first note!</p>
-                    <x-button sm primary icon-right="plus" href="{{ route('notes.create') }}">Create a note.</x-button>
+                    <p class="text-sm ">Let's create your first note!</p>
+                    <x-button class="text-white bg-[#fb8500] hover:bg-[#ffb703] lg" icon-right="plus"
+                        href="{{ route('notes.create') }}">
+                        Create a note
+                    </x-button>
+
                 </div>
             @else
                 <div class="grid grid-cols-1 gap-4 mt-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

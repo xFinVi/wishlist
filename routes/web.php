@@ -30,8 +30,8 @@ Volt::route('notes/{note}/edit', 'notes.edit-note')
 
 
 Route::get('notes/{note}', function (Note $note) {
-    if (!$note->is_published) {
-        abort(403, "Not is not published yet.");
+    if ($note->user_id !== $note->user_id) {
+        abort(403, "Not Authorized.");
     }
     $user = $note->user;
 

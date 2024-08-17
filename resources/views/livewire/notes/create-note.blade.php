@@ -38,6 +38,7 @@ new class extends Component {
         <x-textarea wire:model="noteBody" :value="old('noteBody')" label='Body' placeholder="Europe trip to Paris with ..." />
         <x-input wire:model="noteRecipient" :value="old('noteRecipient')" label='Recipient' placeholder="your@friend.com" />
         <x-input wire:model="noteSendDate" :value="old('noteSendDate')" type="date" label='Send Date' />
-        <x-button type="submit" class="mt-3" primary right-icon="calendar" spinner>Submit</x-button>
+        <x-button type="submit" class="mt-3 text-white bg-[#fb8500] hover:bg-[#ffb703] lg" right-icon="calendar"
+            spinner>Submit</x-button>
     </form>
 </div>

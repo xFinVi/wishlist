@@ -50,7 +50,7 @@ new class extends Component {
             @forelse ($recentNotes as $note)
                 <div class="flex items-center justify-between p-4 bg-gray-100 rounded-lg w-80 dark:bg-gray-700 group">
                     <div>
-                        @can('update', $note)
+                        @can('view', $note)
                             <a href="{{ route('notes.show', $note) }}" wire:navigate
                                 class="font-bold text-gray-900 dark:text-gray-100">
                                 {{ $note->title }}
