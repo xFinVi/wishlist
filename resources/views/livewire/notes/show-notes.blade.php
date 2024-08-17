@@ -14,7 +14,7 @@ new class extends Component {
     public function with(): array
     {
         return [
-            'notes' => Auth::user()->notes()->orderByRaw('CASE WHEN send_date >= CURRENT_TIMESTAMP THEN 0 ELSE 1 END')->orderBy('send_date', 'asc')->get(),
+            'notes' => Auth::user()->notes()->orderBy('send_date', 'asc')->get(),
         ];
     }
 }; ?>
