@@ -70,7 +70,8 @@ new #[Layout('layouts.app')] class extends Component {
                 <x-checkbox label="Note Publish" wire:model='noteIsPublished'>Published</x-checkbox>
             </div>
             <div class="flex justify-between mt-6">
-                <x-button type="submit" secondary right-icon="calendar" sm spinner>Save Note</x-button>
+                <x-button type="submit" right-icon="calendar" class=" text-white bg-[#ffb703] hover:bg-[#fb8500] lg" sm
+                    spinner>Save Note</x-button>
                 <x-button href="{{ route('notes.index') }}" negative sm flat right-icon="calendar" spinner>Back To
                     Notes</x-button>
             </div>
