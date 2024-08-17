@@ -2,6 +2,7 @@
 
 use WireUi\Components;
 use WireUi\Enum\Packs;
+use WireUi\Facades\WireUi;
 use WireUi\WireUiConfig as Config;
 
 return [
@@ -122,5 +123,8 @@ return [
         //     'class' => Components\Button\Mini::class,
         //     'alias' => 'new-mini-button',
         // ],
-    ]),
+        /*        'dropdown' => [
+            'alias' => 'wireui-dropdown',
+            'class' => Components\Dropdown::class,
+        ], */]),
 ];

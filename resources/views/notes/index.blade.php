@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <div class="flex items-center justify-center gap-6">
+        <div class="flex items-center justify-start gap-6">
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 {{ __('Notes') }}
             </h2>

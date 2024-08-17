@@ -4,7 +4,7 @@ use App\Models\Note;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
-Route::view('/', 'welcome');
+Route::view('/', 'welcome')->name('home');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
@@ -44,6 +44,10 @@ Route::get('notes/{note}', function (Note $note) {
     );
 })->name('notes.show');
 
+// Example routes
+Route::view('/privacy-policy', 'privacy-policy')->name('privacy-policy');
+Route::view('/terms-of-service', 'terms-of-service')->name('terms-of-service');
+Route::view('/contact', 'contact')->name('contact');
 
 
 require __DIR__ . '/auth.php';

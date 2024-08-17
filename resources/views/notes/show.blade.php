@@ -33,7 +33,10 @@
         </div>
     </div>
     <div class="flex justify-center mt-8">
-        <x-button icon="pencil" flat gray href="{{ route('notes.edit', $note) }}" wire:navigate />
+        @can('update', $note)
+            <x-button icon="pencil" flat gray href="{{ route('notes.edit', $note) }}" wire:navigate />
+        @endcan
+
         <x-button icon="arrow-left" flat gray href="{{ route('notes.index') }}">
             Back to Notes
         </x-button>
