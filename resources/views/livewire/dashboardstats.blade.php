@@ -1,6 +1,7 @@
 <?php
 
 use Livewire\Volt\Component;
+use App\Models\Note;
 
 new class extends Component {
     public function with()
@@ -10,6 +11,13 @@ new class extends Component {
             'notesLovedCount' => Auth::user()->notes->sum('heart_count'),
             'recentNotes' => Auth::user()->notes()->orderBy('send_date', 'desc')->take(4)->get(),
         ];
+    }
+
+    public function delete($noteId)
+    {
+        $note = Note::where('id', $noteId)->first();
+        $this->authorize('delete', $note);
+        $note->delete();
     }
 }; ?>
 
@@ -68,7 +76,11 @@ new class extends Component {
 
                     <div
                         class="flex items-center space-x-3 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                        <x-mini-button sm rounded rose flat icon="x-mark" wire:click="delete('{{ $note->id }}')" />
+                        @can('delete', $note)
+                            <x-mini-button sm rounded rose flat icon="x-mark" wire:click="delete('{{ $note->id }}')" />
+                        @endcan
+
+
                     </div>
                 </div>
             @empty
