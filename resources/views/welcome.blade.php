@@ -17,22 +17,8 @@
 
 </head>
 
-<body class="flex flex-col min-h-screen antialiased bg-[#14435b] ">
+<body class="flex flex-col min-h-screen antialiased bg-[#14435b] max-w-[1200px] mx-auto">
 
-    <header class="w-full bg-[#023047] text-white">
-        <div class="px-5 py-4">
-            @auth
-                <livewire:layout.navigation />
-            @else
-                <div class="flex items-center justify-start py-4 space-x-4">
-                    <a href="{{ route('login') }}"
-                        class="px-3 py-2 text-sm font-semibold text-white bg-[#fb8500] rounded-lg shadow-lg hover:bg-[#e97c00]">
-                        Login
-                    </a>
-                </div>
-            @endauth
-        </div>
-    </header>
 
     <!-- Main Content -->
     <main
@@ -41,11 +27,18 @@
             <h1 class="mb-4 text-3xl font-bold p-4 rounded-lg text-[#fff] md:text-4xl">
                 Welcome to SendNotes
             </h1>
+            <div class="flex items-center justify-center gap-4">
+                <a href="{{ route('login') }}"
+                    class="px-3 py-2 text-sm font-semibold text-white bg-[#fb8500] rounded-lg shadow-lg hover:bg-[#e97c00] md:px-6 md:py-3">
+                    Login
+                </a>
 
-            <a href="{{ route('register') }}"
-                class="px-3 py-2 my-6 text-sm font-semibold text-white bg-[#219ebc] rounded-lg shadow-lg hover:bg-[#1a8cbc] md:px-6 md:py-3">
-                Get Started
-            </a>
+                <a href="{{ route('register') }}"
+                    class="px-3 py-2  text-sm font-semibold text-white bg-[#219ebc] rounded-lg shadow-lg hover:bg-[#1a8cbc] md:px-6 md:py-3">
+                    Get Started
+                </a>
+            </div>
+
         </div>
 
         <div class="text-center">

@@ -83,5 +83,12 @@ new #[Layout('layouts.guest')] class extends Component {
                 {{ __('Register') }}
             </x-primary-button>
         </div>
+
+        <div class="flex justify-center mt-4">
+            <a href="{{ route('login') }}"
+                class="text-sm font-semibold text-indigo-500 rounded-lg shadow-lg hover:bg-indigo-800 hover:text-white md:px-3 md:py-2 ">
+                Login
+            </a>
+        </div>
     </form>
 </div>
