@@ -23,7 +23,7 @@
                 </p>
                 <h3>{{ $user->name }}</h3>
             </div>
-            <div class="p-6 ">
+            <div class="p-6">
                 <livewire:heartreact :note="$note" />
             </div>
 

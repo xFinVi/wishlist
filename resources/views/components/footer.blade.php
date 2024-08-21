@@ -1,4 +1,4 @@
-<footer class="py-6 text-white bg-[#023047]">
+<footer class="w-full py-6 text-white">
     <div class="container px-4 mx-auto">
         <div class="flex flex-col items-center space-y-4 md:flex-row md:justify-between md:space-y-0">
             <div class="text-center md:text-left">

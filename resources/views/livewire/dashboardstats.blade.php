@@ -6,11 +6,13 @@ use App\Models\Note;
 new class extends Component {
     public function with()
     {
-        return [
-            'notesSentCount' => Auth::user()->notes()->where('send_date', '<', now())->where('is_published', true)->count(),
+        $data = [
+            'notesSentCount' => Auth::user()->notes()->where('is_published', true)->count(),
             'notesLovedCount' => Auth::user()->notes->sum('heart_count'),
             'recentNotes' => Auth::user()->notes()->orderBy('send_date', 'desc')->take(4)->get(),
         ];
+
+        return $data;
     }
 
     public function delete($noteId)

@@ -22,6 +22,7 @@ new class extends Component {
 }; ?>
 
 <div>
-    <x-button xs wire:click='increaseHeartCount' rose icon='heart' spinner>{{ $heartCount }}</x-button>
+    <x-button sm wire:click='increaseHeartCount' flat red icon='heart' spinner>{{ $heartCount }}</x-button>
+
 
 </div>
